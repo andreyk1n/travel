@@ -1,0 +1,83 @@
+.stories {
+    margin: 50px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        position: relative;
+    }
+
+    &__header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link {
+        color: #FB8F1D;
+    }
+
+    &__cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        img {
+            object-position: center;
+            object-fit: fill;
+            border-radius: 20px 20px 0 0;
+            width: 100%;
+            height: 100%;
+            max-height: 233px;
+            min-height: 233px;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        @include adaptiveValue('font-size', 20px, 18px);
+        color: #000;
+    }
+
+    .decor {
+        position: absolute;
+        z-index: -1;
+
+       &--first {
+            left: 29%;
+            top: 1%;
+        }
+
+        &--second {
+            left: -4%;
+            bottom: 15%;
+        }
+        
+        &--third {
+            right: 29%;
+            bottom: -3%;
+        }
+    }
+}

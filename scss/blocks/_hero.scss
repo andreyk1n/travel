@@ -1,0 +1,137 @@
+.hero {
+    margin: 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 992px) {
+        height: auto;
+        margin: 100px 0 50px 0;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        position: relative;
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        color: #202336;
+        @include adaptiveValue('font-size', 60px, 36px);
+        @include adaptiveValue('line-height', 80px, 30px);
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        max-width: 587px;
+        max-height: 554px;
+        object-fit: cover;
+    }
+
+    &__content {
+        max-width: 470px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @media (max-width: 992px) {
+            max-width: 100%;
+        }
+    } 
+
+    &__finder {
+        margin-top: 60px;
+        color: #202336;
+        @include adaptiveValue('font-size', 22px, 18px);
+        font-weight: 600;
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 32px;
+            height: 2px;
+            background-color: #202336;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+        }
+    }
+
+    &__find-form {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+
+        @media (max-width: 768px) {
+            gap: 15px;
+        }
+    }
+
+    .select-wrapper {
+        position: relative;
+        max-width: 220px;
+        width: 100%;
+    }
+
+    select {
+        width: 100%;
+        padding: 17px 20px;
+        border: 1px solid #afb0b9;
+        border-radius: 6px;
+        appearance: none;
+        background-color: #fff;
+        font-size: 16px;
+        font-family: inherit;
+        position: relative;
+        z-index: 1;
+
+        option {
+            padding: 17px 20px;
+        }
+    }
+
+    .select-wrapper::after {
+        content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"/></svg>');
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    select:focus + .select-wrapper::after {
+        transform: translateY(-50%) rotate(-135deg);
+    }
+
+    .decor {
+        position: absolute;
+        z-index: -1;
+    
+        &--first {
+            left: 40%;
+            top: 20%;
+        }
+    
+        &--second {
+            left: 50%;
+            bottom: 10%;
+        }
+    
+        &--third {
+            left: -5%;
+            bottom: 50%;
+        }
+    }
+    
+}
+

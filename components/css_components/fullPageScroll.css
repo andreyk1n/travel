@@ -1,0 +1,93 @@
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+body {
+    overflow: hidden;
+}
+
+.fullpage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+#section1 {
+    background-color: #ff9999;
+}
+
+#section2 {
+    background-color: #99ff99;
+}
+
+#section3 {
+    background-color: #9999ff;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* Стилі для буллітів */
+/* --------------------------------------------------------------------------------------------------------------- */
+
+.fullpage-bullets {
+    display: flex;
+    gap: 10px;
+}
+
+.fullpage-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.fullpage-bullet.active {
+    background-color: #fff;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* Позиції буллітів */
+/* --------------------------------------------------------------------------------------------------------------- */
+
+.fullpage-bullets.left {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.fullpage-bullets.top {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fullpage-bullets.right {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.fullpage-bullets.bottom {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}

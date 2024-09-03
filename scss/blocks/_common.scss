@@ -1,0 +1,85 @@
+// ---------------------------------------------------------------------------------------------------------------
+// Цей файл призначений для стилів базових блоків, які мають властивість повторюватись.
+// ---------------------------------------------------------------------------------------------------------------
+
+.title__main {
+    font-weight: bold;
+    color: #202336;
+    font-family: "Playfair Display",serif;
+    @include adaptiveValue('font-size', 64px, 36px);
+    @include adaptiveValue('line-height', 80px, 40px);
+    font-weight: 700;
+    line-height: 80px;
+}
+
+.title {
+    color: #000;
+    font-family: "Playfair Display",serif;
+    font-weight: 700;
+    @include adaptiveValue('font-size', 36px, 22px);
+    @include adaptiveValue('line-height', 50px, 20px);
+}
+
+.button {
+    font-size: 16px;
+    background-color: $orange;
+    transition-duration: $transitionDuration;
+    border: 1px solid $orange;
+    outline: 0;
+    color: white;
+    cursor: pointer;
+    width: fit-content;
+    border-radius: 8px;
+    padding: 10px 30px;
+    &:hover {
+        border: 1px solid $orange;
+        background-color: white;
+        color: $orange;
+    }
+}
+
+
+.button--white {
+    font-size: 16px;
+    background-color: white;
+    transition-duration: $transitionDuration;
+    border: 1px solid $orange;
+    outline: 0;
+    color: $orange;
+    cursor: pointer;
+    width: fit-content;
+    border-radius: 8px;
+    padding: 10px 30px;
+    &:hover {
+        border: 1px solid $orange;
+        background-color: $orange;
+        color: white;
+    }
+}
+
+.link__active {
+    font-weight: bold;
+    color: #000;
+}
+
+.title {
+    color: #000;
+    @include adaptiveValue('font-size', 36px, 26px);
+    @include adaptiveValue('line-height', 50px, 26px);
+    font-family: "Playfair Display",serif;
+    font-weight: 700;
+}
+
+.view-all {
+    min-width: 68px;
+    color: #FB8F1D;
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-wrap: nowrap;
+
+    &:hover {
+        opacity: .5;
+    }
+}
